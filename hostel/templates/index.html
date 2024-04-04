@@ -1,0 +1,316 @@
+{% extends 'navigation.html' %}
+{% load static %}
+{% block main %}
+
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+
+.image1,.image2,.image3,.image4 {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+
+
+.image1:hover,.image2:hover,.image3:hover,.image4:hover{
+  opacity: 0.3;
+}
+
+
+
+
+
+</style>
+<body>
+<img src="{% static 'images/hostel9.png' %}"  style="width:100%; height:450px;">
+<hr>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3 p-2">
+            <div class="card" style="width:300px">
+                <h3 style="color: black">Bedroom</h3>
+                <img src="{% static 'images/bed.jpg' %}" class="image1" style="width:100% ; height : 200px">
+            </div>
+        </div>
+
+        <div class="col-sm-3 p-2">
+            <div class="card" style="width:300px">
+                <h3 style="color: black">Kitchen</h3>
+                <img src="{% static 'images/mess.jpg' %}" class="image2" style="width:100% ; height : 200px">
+            </div>
+        </div>
+
+        <div class="col-sm-3 p-2">
+            <div class="card" style="width:300px">
+                <h3 style="color: black">Bathroom</h3>
+                <img src="{% static 'images/bathroom.jpg' %}" class="image3" style="width:100% ; height : 200px">
+            </div>
+        </div>
+
+        <div class="col-sm-3 p-2">
+            <div class="card" style="width:300px">
+                <h3 style="color: black">Dining</h3>
+                <img src="{% static 'images/dinning.jpg' %}" class="image4" style="width:100% ; height : 200px">
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card shadow mt-3">
+                <div class="card-body" style="background-color: #D3D3D3; height: 650px;">
+                    <h4 class="p-2" style="color: black;"><b>Hostel Rules and Regulations </b> </h4>
+                    <hr>
+                    <marquee width="100%" direction="up" height="80%">
+                        <ul>
+                            <li><p><span style="color: black;">Students Should Be Present In Their Rooms Between 9:00p.m To 6:00a.m </span>
+                            </p></li>
+
+                            <li><p><span style="color: black;">Students Must Keep The Campus & Rooms Clean Defacing Walls, Equipment, Furniture etc., Is Strictly Prohibited.</span>
+                            </p></li>
+
+                            <li><p><span style="color: black;">Students Must Turn Off All The Electrical Equipments & Lights Before Leaving Their Rooms.</span>
+                            </p></li>
+
+                            <li><p><span style="color: black;">Students Are Not Allowed To Use Electric Stoves, Heaters ,Laptopsetc In Rooms Except In Designated Places.</span>
+                            </p></li>
+
+                            <li><p><span style="color: black;">Smoking, Alcohol & Narcotic Consumption Is Strictly Prohibited In And Around The Hostel Premises. Strict Action Will Be Taken Against Offenders.</span>
+                            </p></li>
+
+                            <li><p><span style="color: black;">The Hostel Has A Full Fleged Facility Of 24X7 Internet Connection Girls are Given Acess To The Internet At Bare Minimum Charges. </span>
+                            </p></li>
+
+                            <li><p>
+                                <span style="color: black;">The Quantity Of Food Will Be Unlimited Except In The Case Of Special Items.</span>
+                            </p></li>
+
+                            <li><p><span style="color: black;">Visiting Time For Local Quardians-Morning 8:30 To 11:30a.m Evening 4.00 to 7.00p.m. </span>
+                            </p></li>
+
+                            <li><p><span style="color: black;">Non-Veg Food Is Not Allowed In The Hostel.</span>
+                            </p></li>
+
+                            
+                            
+                        </ul>
+                    </marquee>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="card shadow mt-3">
+                <div class="card-body" style="background-color: #d7ccc8">
+                    <h5 class="p-2 text-primary">Registration Process</h5>
+                    <p><b><span style="color: black;">1.</b> The Applicant Needs To Register On The Website Go To Option <a class="external text" data-bs-toggle="modal" href="#userRegModal" style="text-decoration: none;"> User Registration</a></span></p>
+            
+
+                    <p><b><span style="color: black;">2.</b> There Registration no. Will Have Already Been Given To You</span></p>
+            
+
+                    <p><b><span style="color: black;">3.</b> Then Fill Your Information As Per The Given Option (*Fill Every Box Of Information-Nither Form Will Be Not Submitted)</span>
+                    </p>
+
+                    <p><b><span style="color: black;">4.</b> The Online Application Form Photograph Can Only Be Accepted As JPEG format, File Size And Dimensions Not Matters.</span>
+                    </p>
+
+                    <p><b><span style="color: black;">5.</b> There Will Be One Separate Box For Uploading Photograph</span>
+                    </p>
+
+                    <p><b><span style="color: black;">6.</b> The Applicant Can login Using The Credentials And Fill The Form As Instructed.</span>
+                    </p>
+
+                    
+                    <p><b><span style="color: black;">7.</b> Fill Your E-mail It Is Required For Log In Your Application.</span>
+                    </p></li>
+
+                  
+                    <p><b><span style="color: black;">8.</b> Password Must Be As 4 Characters/Numbers And Fill It Carefully And Confirm It. </span>
+                    </p></li>
+
+                    
+                    <p><b><span style="color: black;">9.</b> Log In To Your Profile <a class="external texr" href="{% url 'user_login' %}" style="text-decoration: none;"> Log in</a></span>
+                    </p></li>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- User Registration -->
+{% if error == "no" %}
+<script>
+	   alert('Registration Successfully');
+       window.location=('{% url 'user_login' %}');
+</script>
+{% endif %}
+
+{% if error == "yes" %}
+<script>
+	    alert('Something went wrong, Try Again');
+
+
+
+</script>
+{% endif %}
+
+<script>
+    function checkpass()
+    {
+      if(document.signup.password.value!=document.signup.cpwd.value){
+        alert('Password and Confirm Password field does not match');
+        document.signup.cpwd.focus();
+        return false;
+      }
+      return true;
+    }
+</script>
+
+<div class="modal fade" id="userRegModal" tabindex="-1"
+     aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="userRegModalLabel"
+                    style="font-family: 'Impact'; font-size: 35px;">Registration Form</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form method="POST" class="signup" name="signup" enctype="multipart/form-data"
+                      onsubmit="return checkpass();">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label class="form-label">Registration No</label> <input type="number"
+                                                                                 class="form-control" name="regNo"
+                                                                                 value="{{regno}}" readonly>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">First Name</label> <input type="text"
+                                                                            class="form-control" name="firstName"
+                                                                            id="firstName"
+                                                                            placeholder="Enter here First Name"
+                                                                            required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Last Name</label> <input type="text"
+                                                                           class="form-control" name="lastName"
+                                                                           id="lastName"
+                                                                           placeholder="Enter here Last Name" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Image</label>
+                        <input type="file" name="image" 
+                                                       class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Gender</label>
+                        <select name="gender" class="form-control" required="required">
+                            <option value="">Select Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Others">Others</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Contact Number</label> <input
+                            type="text" class="form-control" name="contactNo" id="contactNo"
+                            placeholder="91XXXXXXXX" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Email ID</label> <input type="email"
+                                                                          class="form-control" name="email" id="email"
+                                                                          placeholder="Ex-abc@gmail.com" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control" name="password" id="password"
+                               placeholder="Enter here Password" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" name="cpwd" id="cpwd"
+                               placeholder="Enter Again Password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+                </form>
+            </div>
+            <div class="modal-footer"></div>
+        </div>
+    </div>
+</div>
+
+<!-- End User Registration -->
+
+<!-- User Login -->
+
+<div class="modal fade" id="userLoginModal" tabindex="-1"
+     aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="userLoginModalLabel"
+                    style="font-family: 'Monotype Corsiva'; font-size: 35px;">User Login</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form method="POST">
+                    {% csrf_token %}
+
+                    <div class="mb-3">
+                        <label class="form-label">Email ID</label> <input type="email"
+                                                                          class="form-control" name="email"
+                                                                          placeholder="Ex-abc@gmail.com" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control" name="password" placeholder="Enter here Password"
+                               required>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+                </form>
+            </div>
+            <div class="modal-footer"></div>
+        </div>
+    </div>
+</div>
+
+<!-- End User Login -->
+{% include 'footer.html' %}
+{% endblock %}
